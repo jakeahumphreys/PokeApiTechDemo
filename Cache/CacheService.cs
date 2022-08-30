@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using PokeApiTechDemo.Cache.Types;
 
@@ -11,6 +12,11 @@ namespace PokeApiTechDemo.Cache
         public CacheService()
         {
             _repository = new CacheRepository();
+        }
+
+        public List<CacheEntry> GetCacheEntriesForName(string pokemonName)
+        {
+            return _repository.GetEntriesForName(pokemonName);
         }
         
         public void CacheResult(string pokemonName, string jsonBlob)

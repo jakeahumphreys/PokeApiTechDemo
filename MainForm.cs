@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using PokeApiTechDemo.Cache;
+using PokeApiTechDemo.Common.Types;
 using PokeApiTechDemo.PokeApi;
 using PokeApiTechDemo.PokeApi.Types;
 
@@ -28,24 +29,60 @@ namespace PokeApiTechDemo
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            var result = _pokeApiClient.GetPokemon(txtSearch.Text);
+            var searchText = txtSearch.Text;
 
-            if (result.HasError)
-                MessageBox.Show(result.Error.Message);
+            Pokemon pokemon = null;
+            string resultSource;
             
-            _cacheService.CacheResult(result.Pokemon.Name, JsonConvert.SerializeObject(result.Pokemon));
-            
-            PopulateFormFromResult(result.Pokemon);
+            var potentialCacheEntries = _cacheService.GetCacheEntriesForName(searchText);
+
+            if (potentialCacheEntries.Count > 0)
+            {
+                var cacheEntry = potentialCacheEntries.First();
+
+                if (cacheEntry.Time.AddMinutes(10) > DateTime.Now)
+                {
+                    pokemon = JsonConvert.DeserializeObject<Pokemon>(cacheEntry.Blob);
+                    resultSource = ResultSourceType.RESULT_CACHE;
+                }
+                else
+                {
+                    pokemon = FetchPokemonFromApi(searchText);
+                    resultSource = ResultSourceType.RESULT_API;
+                }
+            }
+            else
+            {
+                pokemon = FetchPokemonFromApi(searchText);
+                resultSource = ResultSourceType.RESULT_API;
+            }
+
+            PopulateFormFromResult(pokemon, resultSource);
         }
 
-        private void PopulateFormFromResult(Pokemon pokemon)
+        private Pokemon FetchPokemonFromApi(string searchText)
+        {
+            var result = _pokeApiClient.GetPokemon(searchText);
+            if (result.HasError)
+                MessageBox.Show(result.Error.Message);
+
+            var pokemon = result.Pokemon;
+            _cacheService.CacheResult(pokemon.Name, JsonConvert.SerializeObject(pokemon));
+
+            return pokemon;
+        }
+
+        private void PopulateFormFromResult(Pokemon pokemon, string resultSource)
         {
             //Set JSON Tab
             txtJson.Text = JsonConvert.SerializeObject(pokemon, Formatting.Indented);
             
             //Populate Tree View
             tvDetails.Nodes.Clear();
-            
+
+            var sourceNode = tvDetails.Nodes.Add("Result Source");
+            sourceNode.Nodes.Add(resultSource);
+                
             var detailsPrimaryNode = tvDetails.Nodes.Add(pokemon.Name);
             var detailsAbilitiesMetaNode = detailsPrimaryNode.Nodes.Add("Abilities");
             var detailsFormsNode = detailsPrimaryNode.Nodes.Add("Forms");

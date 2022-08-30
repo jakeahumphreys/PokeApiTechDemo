@@ -94,6 +94,7 @@
         <Compile Include="Cache\CacheService.cs" />
         <Compile Include="Cache\ConnectionStrings.cs" />
         <Compile Include="Cache\Types\CacheEntry.cs" />
+        <Compile Include="Common\Types\ResultSourceType.cs" />
         <Compile Include="MainForm.cs">
             <SubType>Form</SubType>
         </Compile>
