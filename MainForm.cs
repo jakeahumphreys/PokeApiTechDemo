@@ -29,8 +29,19 @@ namespace PokeApiTechDemo
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            var searchText = txtSearch.Text;
+            SearchForPokemon(txtSearch.Text);
+        }
+        
+        private void lstHistory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var searchText = lstHistory.SelectedItem.ToString();
+            txtSearch.Text = searchText;
+            lblStatus.Text = "Searching from history...";
+            SearchForPokemon(searchText);
+        }
 
+        private void SearchForPokemon(string searchText)
+        {
             Pokemon pokemon = null;
             string resultSource;
             
@@ -74,6 +85,9 @@ namespace PokeApiTechDemo
 
         private void PopulateFormFromResult(Pokemon pokemon, string resultSource)
         {
+            lblStatus.Text = "Search complete!";
+            
+            lstHistory.Items.Add(pokemon.Name);
             //Set JSON Tab
             txtJson.Text = JsonConvert.SerializeObject(pokemon, Formatting.Indented);
             

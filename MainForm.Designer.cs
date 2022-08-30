@@ -38,9 +38,9 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tvDetails = new System.Windows.Forms.TreeView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtJson = new System.Windows.Forms.RichTextBox();
-            this.tvDetails = new System.Windows.Forms.TreeView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -56,6 +56,7 @@
             this.lstHistory.Name = "lstHistory";
             this.lstHistory.Size = new System.Drawing.Size(203, 394);
             this.lstHistory.TabIndex = 0;
+            this.lstHistory.SelectedIndexChanged += new System.EventHandler(this.lstHistory_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -135,6 +136,13 @@
             this.tabPage1.Text = "Details";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // tvDetails
+            // 
+            this.tvDetails.Location = new System.Drawing.Point(18, 14);
+            this.tvDetails.Name = "tvDetails";
+            this.tvDetails.Size = new System.Drawing.Size(475, 216);
+            this.tvDetails.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.txtJson);
@@ -153,13 +161,6 @@
             this.txtJson.Size = new System.Drawing.Size(489, 218);
             this.txtJson.TabIndex = 0;
             this.txtJson.Text = "";
-            // 
-            // tvDetails
-            // 
-            this.tvDetails.Location = new System.Drawing.Point(18, 14);
-            this.tvDetails.Name = "tvDetails";
-            this.tvDetails.Size = new System.Drawing.Size(475, 216);
-            this.tvDetails.TabIndex = 0;
             // 
             // MainForm
             // 
