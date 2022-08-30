@@ -1,0 +1,14 @@
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\PokeApiTechDemo.exe.config
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\PokeApiTechDemo.exe
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\PokeApiTechDemo.pdb
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.csproj.AssemblyReference.cache
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.csproj.SuggestedBindingRedirects.cache
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.Properties.Resources.resources
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.csproj.GenerateResource.cache
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.csproj.CoreCompileInputs.cache
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.exe
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.pdb
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.MainForm.resources
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.csproj.CopyComplete
