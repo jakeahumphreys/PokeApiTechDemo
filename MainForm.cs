@@ -44,6 +44,8 @@ namespace PokeApiTechDemo
             txtJson.Text = JsonConvert.SerializeObject(pokemon, Formatting.Indented);
             
             //Populate Tree View
+            tvDetails.Nodes.Clear();
+            
             var detailsPrimaryNode = tvDetails.Nodes.Add(pokemon.Name);
             var detailsAbilitiesMetaNode = detailsPrimaryNode.Nodes.Add("Abilities");
             var detailsFormsNode = detailsPrimaryNode.Nodes.Add("Forms");
