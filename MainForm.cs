@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using PokeApiTechDemo.Cache;
+using PokeApiTechDemo.Common;
 using PokeApiTechDemo.Common.Types;
 using PokeApiTechDemo.PokeApi;
 using PokeApiTechDemo.PokeApi.Types;
@@ -93,6 +94,10 @@ namespace PokeApiTechDemo
             
             //Set Image
             pbMainImage.ImageLocation = pokemon.Sprites.FrontDefault;
+            
+            var randomNumber = Randomiser.GetNumberBetweenOneAndTen();
+            if(randomNumber == 1)
+                pbMainImage.ImageLocation = pokemon.Sprites.FrontShiny;
             
             //Populate Tree View
             tvDetails.Nodes.Clear();
