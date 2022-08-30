@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using PokeApiTechDemo.Cache;
 using PokeApiTechDemo.PokeApi;
 using PokeApiTechDemo.PokeApi.Types;
 
@@ -16,11 +17,13 @@ namespace PokeApiTechDemo
     public partial class MainForm : Form
     {
         private readonly PokeApiClient _pokeApiClient;
+        private readonly CacheService _cacheService;
 
         public MainForm()
         {
             InitializeComponent();
             _pokeApiClient = new PokeApiClient();
+            _cacheService = new CacheService();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -29,6 +32,8 @@ namespace PokeApiTechDemo
 
             if (result.HasError)
                 MessageBox.Show(result.Error.Message);
+            
+            _cacheService.CacheResult(result.Pokemon.Name, JsonConvert.SerializeObject(result.Pokemon));
             
             PopulateFormFromResult(result.Pokemon);
         }
