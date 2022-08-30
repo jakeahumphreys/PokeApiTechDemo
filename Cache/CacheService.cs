@@ -1,4 +1,8 @@
-﻿namespace PokeApiTechDemo.Cache
+﻿using System;
+using System.Linq;
+using PokeApiTechDemo.Cache.Types;
+
+namespace PokeApiTechDemo.Cache
 {
     public class CacheService
     {
@@ -11,7 +15,23 @@
         
         public void CacheResult(string pokemonName, string jsonBlob)
         {
-            _repository.Insert(pokemonName, jsonBlob);
+            var cacheEntry = new CacheEntry
+            {
+                Name = pokemonName,
+                Time = DateTime.Now,
+                Blob = jsonBlob
+            };
+            
+            var existingCacheEntries = _repository.GetEntriesForName(pokemonName);
+
+            if (existingCacheEntries.Count > 0)
+            {
+                _repository.Update(cacheEntry);
+            }
+            else
+            {
+                _repository.Insert(pokemonName, jsonBlob);
+            }
         }
     }
 }
