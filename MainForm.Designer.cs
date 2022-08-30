@@ -38,6 +38,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.pbMainImage = new System.Windows.Forms.PictureBox();
             this.tvDetails = new System.Windows.Forms.TreeView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtJson = new System.Windows.Forms.RichTextBox();
@@ -46,6 +47,7 @@
             this.groupBox3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.pbMainImage)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,25 +124,35 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 18);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(521, 271);
+            this.tabControl1.Size = new System.Drawing.Size(521, 287);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.pbMainImage);
             this.tabPage1.Controls.Add(this.tvDetails);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(513, 245);
+            this.tabPage1.Size = new System.Drawing.Size(513, 261);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Details";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // pbMainImage
+            // 
+            this.pbMainImage.Location = new System.Drawing.Point(290, 14);
+            this.pbMainImage.Name = "pbMainImage";
+            this.pbMainImage.Size = new System.Drawing.Size(212, 184);
+            this.pbMainImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMainImage.TabIndex = 1;
+            this.pbMainImage.TabStop = false;
             // 
             // tvDetails
             // 
             this.tvDetails.Location = new System.Drawing.Point(18, 14);
             this.tvDetails.Name = "tvDetails";
-            this.tvDetails.Size = new System.Drawing.Size(475, 216);
+            this.tvDetails.Size = new System.Drawing.Size(260, 241);
             this.tvDetails.TabIndex = 0;
             // 
             // tabPage2
@@ -149,7 +161,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(513, 245);
+            this.tabPage2.Size = new System.Drawing.Size(513, 261);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "JSON";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -178,9 +190,12 @@
             this.groupBox3.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize) (this.pbMainImage)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.PictureBox pbMainImage;
 
         private System.Windows.Forms.TreeView tvDetails;
 

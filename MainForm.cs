@@ -91,6 +91,9 @@ namespace PokeApiTechDemo
             //Set JSON Tab
             txtJson.Text = JsonConvert.SerializeObject(pokemon, Formatting.Indented);
             
+            //Set Image
+            pbMainImage.ImageLocation = pokemon.Sprites.FrontDefault;
+            
             //Populate Tree View
             tvDetails.Nodes.Clear();
 
