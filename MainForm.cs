@@ -52,7 +52,7 @@ namespace PokeApiTechDemo
                 detailsFormsNode.Nodes.Add(form.Name);
 
             foreach (var move in pokemon.Moves)
-                detailsMovesNode.Nodes.Add(move.Name);
+                detailsMovesNode.Nodes.Add(move.Move.Name);
 
             foreach (var stat in pokemon.Stats)
                 detailsStatsNode.Nodes.Add(stat.Stat.Name);

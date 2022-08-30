@@ -29,7 +29,7 @@ namespace PokeApiTechDemo.PokeApi.Types
         public string LocationAreaEncounters { get; set; }
 
         [JsonProperty("moves")]
-        public List<Move> Moves { get; set; }
+        public List<MoveMeta> Moves { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }

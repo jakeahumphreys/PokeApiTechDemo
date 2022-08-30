@@ -62,6 +62,7 @@
         <Compile Include="PokeApi\Types\Error.cs" />
         <Compile Include="PokeApi\Types\GetPokemonResult.cs" />
         <Compile Include="PokeApi\Types\Move.cs" />
+        <Compile Include="PokeApi\Types\MoveMeta.cs" />
         <Compile Include="PokeApi\Types\Pokemon.cs" />
         <Compile Include="PokeApi\Types\PokemonForm.cs" />
         <Compile Include="PokeApi\Types\Species.cs" />
