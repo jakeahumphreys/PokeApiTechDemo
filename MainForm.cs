@@ -17,17 +17,12 @@ namespace PokeApiTechDemo
 {
     public partial class MainForm : Form
     {
-        private readonly SettingService _settingService;
-
-        private Dictionary<string, Setting> _settings;
         private readonly SearchService _searchService;
 
         public MainForm()
         {
             InitializeComponent();
             _searchService = new SearchService();
-            _settingService = new SettingService(new SettingRepository());
-            _settings = _settingService.LoadSettings();
         }
         
         private void btnSearch_Click(object sender, EventArgs e)
