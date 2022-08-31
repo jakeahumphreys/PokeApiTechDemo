@@ -183,7 +183,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "PokéApi Tech Demo (.NET 4.8)";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
