@@ -75,6 +75,19 @@ namespace PokeApiTechDemo
             return searchResult;
         }
 
+        public string SourceImage(Pokemon pokemon)
+        {
+            var randomNumber = Randomiser.GetNumberBetweenOneAndTen();
+            DebugLog($"Shiny Random Number: {randomNumber}");
+            if (randomNumber == 1)
+            {
+                DebugLog("Ding, it's a shiny!");
+                return pokemon.Sprites.FrontShiny;
+            }
+            
+            return pokemon.Sprites.FrontDefault;
+        }
+
         private Pokemon FetchPokemonFromApi(string searchText)
         {
             DebugLog("Fetching from API");

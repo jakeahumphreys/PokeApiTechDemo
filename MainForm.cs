@@ -79,18 +79,9 @@ namespace PokeApiTechDemo
             lstHistory.Items.Add(pokemon.Name);
             //Set JSON Tab
             txtJson.Text = JsonConvert.SerializeObject(pokemon, Formatting.Indented);
-            
-            //Set Image
-            pbMainImage.ImageLocation = pokemon.Sprites.FrontDefault;
-            
-            var randomNumber = Randomiser.GetNumberBetweenOneAndTen();
-            DebugLog($"Shiny Random Number: {randomNumber}");
-            if (randomNumber == 1)
-            {
-                DebugLog("Ding, it's a shiny!");
-                pbMainImage.ImageLocation = pokemon.Sprites.FrontShiny;
-            }
-            
+
+            pbMainImage.ImageLocation = _searchService.SourceImage(pokemon);
+
             //Populate Tree View
             tvDetails.Nodes.Clear();
 
