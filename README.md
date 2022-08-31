@@ -21,6 +21,8 @@ In this example all the data access is provided using raw SQL. This is to demons
 
 The data logic is stored in a repository class, this means I can implement an interface here and easily unit test the business logic in the service class higher up if necessary. It also means I could go a little further and look to implement the repository pattern, but as this is a single data table for a small cache, it's not strictly needed here.
 
+The Data Access logic is also unit tested, because why not.
+
 ## Improvements
 
 No application is perfect, especially this one as it was written fairly quickly to highlight a skillset. Here's some ways it can be improved further:
