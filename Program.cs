@@ -8,7 +8,6 @@ namespace PokeApiTechDemo
         [STAThread]
         static void Main()
         {
-            Console.WriteLine("App Starting");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
