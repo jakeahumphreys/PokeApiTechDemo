@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace PokeApiTechDemo.Cache
+﻿namespace PokeApiTechDemo.Cache
 {
     public static class ConnectionStrings
     {
