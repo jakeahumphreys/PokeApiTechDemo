@@ -17,21 +17,17 @@ namespace PokeApiTechDemo
 {
     public partial class MainForm : Form
     {
-        private readonly PokeApiClient _pokeApiClient;
-        private readonly CacheService _cacheService;
         private readonly SettingService _settingService;
 
         private Dictionary<string, Setting> _settings;
+        private readonly SearchService _searchService;
 
         public MainForm()
         {
             InitializeComponent();
-            _pokeApiClient = new PokeApiClient();
-            _cacheService = new CacheService(new CacheRepository());
+            _searchService = new SearchService();
             _settingService = new SettingService(new SettingRepository());
             _settings = _settingService.LoadSettings();
-            
-            DebugLog("Logging Enabled");
         }
 
         private void DebugLog(string text)
@@ -47,10 +43,24 @@ namespace PokeApiTechDemo
             var searchText = txtSearch.Text;
 
             if (!ValidationHelper.IsSearchTextValid(searchText))
+            {
                 MessageBox.Show("Your search text isn't quite valid. Must be > 3 characters and contain no numbers or special characters.",
                     "Validation Error");
+            }
             else
-                SearchForPokemon(txtSearch.Text);
+            {
+               HandleSearch(searchText);
+            }
+        }
+
+        private void HandleSearch(string searchText)
+        {
+            var searchResult = _searchService.SearchForPokemon(searchText);
+
+            if (searchResult.Pokemon != null)
+            {
+                PopulateFormFromResult(searchResult.Pokemon, searchResult.Source);
+            }
         }
         
         private void lstHistory_SelectedIndexChanged(object sender, EventArgs e)
@@ -58,65 +68,9 @@ namespace PokeApiTechDemo
             var searchText = lstHistory.SelectedItem.ToString();
             txtSearch.Text = searchText;
             lblStatus.Text = "Searching from history...";
-            SearchForPokemon(searchText);
+            HandleSearch(searchText);
         }
-
-        private void SearchForPokemon(string searchText)
-        {
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-            
-            Pokemon pokemon = null;
-            string resultSource;
-            
-            var potentialCacheEntries = _cacheService.GetCacheEntriesForName(searchText);
-
-            if (potentialCacheEntries.Count > 0)
-            {
-                var cacheEntry = potentialCacheEntries.First();
-
-                if (cacheEntry.Time.AddMinutes(10) > DateTime.Now)
-                {
-                    DebugLog("Fetching from cache");
-                    pokemon = JsonConvert.DeserializeObject<Pokemon>(cacheEntry.Blob);
-                    resultSource = ResultSourceType.RESULT_CACHE;
-                }
-                else
-                {
-                    pokemon = FetchPokemonFromApi(searchText);
-                    resultSource = ResultSourceType.RESULT_API;
-                }
-            }
-            else
-            {
-                pokemon = FetchPokemonFromApi(searchText);
-                resultSource = ResultSourceType.RESULT_API;
-            }
-
-            if (pokemon != null)
-                PopulateFormFromResult(pokemon, resultSource);
-            
-            stopwatch.Stop();
-            DebugLog($"Fetch took {stopwatch.ElapsedMilliseconds} ms");
-        }
-
-        private Pokemon FetchPokemonFromApi(string searchText)
-        {
-            DebugLog("Fetching from API");
-            var result = _pokeApiClient.GetPokemon(searchText);
-            if (result.HasError)
-            {
-                MessageBox.Show(result.Error.Message);
-                return null;
-            }
-            
-            var pokemon = result.Pokemon;
-            DebugLog("Caching new result");
-            _cacheService.CacheResult(pokemon.Name, JsonConvert.SerializeObject(pokemon));
-
-            return pokemon;
-        }
-
+        
         private void PopulateFormFromResult(Pokemon pokemon, string resultSource)
         {
             lblStatus.Text = "Search complete!";

@@ -97,6 +97,7 @@
         <Compile Include="Cache\Types\CacheEntry.cs" />
         <Compile Include="Common\Randomiser.cs" />
         <Compile Include="Common\Types\ResultSourceType.cs" />
+        <Compile Include="Common\Types\SearchResult.cs" />
         <Compile Include="Common\ValidationHelper.cs" />
         <Compile Include="MainForm.cs">
             <SubType>Form</SubType>
@@ -104,6 +105,7 @@
         <Compile Include="MainForm.Designer.cs">
             <DependentUpon>MainForm.cs</DependentUpon>
         </Compile>
+        <Compile Include="SearchService.cs" />
         <Compile Include="PokeApi\PokeApiClient.cs" />
         <Compile Include="PokeApi\Types\Ability.cs" />
         <Compile Include="PokeApi\Types\AbilityMeta.cs" />
