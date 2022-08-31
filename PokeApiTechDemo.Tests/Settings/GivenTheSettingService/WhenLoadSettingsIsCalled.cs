@@ -43,6 +43,12 @@ namespace PokeApiTechDemo.Tests.Settings.GivenTheSettingService
             _result = subject.LoadSettings();
 
         }
+
+        [Test]
+        public void ThenTheRepositoryIsCalled()
+        {
+            _repository.Verify(x => x.GetAll(), Times.Once);
+        }
         
         [Test]
         public void ThenTheCorrectNumberOfSettingsIsReturned()
