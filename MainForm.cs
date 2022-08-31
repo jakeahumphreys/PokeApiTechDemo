@@ -66,16 +66,13 @@ namespace PokeApiTechDemo
         private void PopulateFormFromResult(Pokemon pokemon, string resultSource)
         {
             lblStatus.Text = "Search complete!";
-
             lstHistory.Items.Add(pokemon.Name);
-            //Set JSON Tab
+            
             txtJson.Text = JsonConvert.SerializeObject(pokemon, Formatting.Indented);
 
             pbMainImage.ImageLocation = _searchService.SourceImage(pokemon);
 
-            //Populate Tree View
             tvDetails.Nodes.Clear();
-
             var sourceNode = tvDetails.Nodes.Add("Result Source");
             sourceNode.Nodes.Add(resultSource);
                 
