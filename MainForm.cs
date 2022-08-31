@@ -25,7 +25,7 @@ namespace PokeApiTechDemo
         {
             InitializeComponent();
             _pokeApiClient = new PokeApiClient();
-            _cacheService = new CacheService();
+            _cacheService = new CacheService(new CacheRepository());
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

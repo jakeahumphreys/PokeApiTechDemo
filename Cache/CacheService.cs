@@ -8,10 +8,10 @@ namespace PokeApiTechDemo.Cache
     public class CacheService
     {
         private readonly ICacheRepository _repository;
-
-        public CacheService()
+        
+        public CacheService(ICacheRepository repository)
         {
-            _repository = new CacheRepository();
+            _repository = repository;
         }
 
         public List<CacheEntry> GetCacheEntriesForName(string pokemonName)
