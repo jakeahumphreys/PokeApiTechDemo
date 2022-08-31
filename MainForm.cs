@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using PokeApiTechDemo.Cache;
 using PokeApiTechDemo.Common;
-using PokeApiTechDemo.Common.Types;
-using PokeApiTechDemo.PokeApi;
 using PokeApiTechDemo.PokeApi.Types;
-using PokeApiTechDemo.Settings;
-using PokeApiTechDemo.Settings.Types;
 
 namespace PokeApiTechDemo
 {
