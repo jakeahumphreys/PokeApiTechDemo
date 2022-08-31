@@ -43,7 +43,7 @@ namespace PokeApiTechDemo.Cache
                     }
                     catch (Exception exception)
                     {
-                        MessageBox.Show("Error inserting cache item"); //temporary 
+                        MessageBox.Show(exception.Message);
                         transaction.Rollback();
                     }
                 }
@@ -73,7 +73,7 @@ namespace PokeApiTechDemo.Cache
                     }
                     catch (Exception exception)
                     {
-                        MessageBox.Show("Error updating cache item"); //temporary 
+                        MessageBox.Show(exception.Message); //temporary 
                         transaction.Rollback();
                     }
                 }

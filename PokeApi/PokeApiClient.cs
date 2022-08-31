@@ -8,18 +8,16 @@ namespace PokeApiTechDemo.PokeApi
 {
     public class PokeApiClient
     {
-        private static readonly HttpClient httpClient = new HttpClient();
+        private static readonly HttpClient HttpClient = new HttpClient();
         
         public GetPokemonResult GetPokemon(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
                 return new GetPokemonResult().WithError(HttpStatusCode.BadRequest, "No request made - name missing", null);
-
-            HttpResponseMessage responseMessage;
             
             try
             {
-                var response = httpClient.GetAsync($"https://pokeapi.co/api/v2/pokemon/{name}").Result;
+                var response = HttpClient.GetAsync($"https://pokeapi.co/api/v2/pokemon/{name}").Result;
 
                 if (!response.IsSuccessStatusCode)
                     return new GetPokemonResult().WithError(response.StatusCode, response.ReasonPhrase, null);
