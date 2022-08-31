@@ -27,8 +27,16 @@ namespace PokeApiTechDemo
         
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            var searchText = txtSearch.Text;
+            CallSearch(txtSearch.Text);
+        }
+        
+        private void lstHistory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CallSearch(lstHistory.SelectedItem.ToString());
+        }
 
+        private void CallSearch(string searchText)
+        {
             if (!ValidationHelper.IsSearchTextValid(searchText))
             {
                 MessageBox.Show("Your search text isn't quite valid. Must be > 3 characters and contain no numbers or special characters.",
@@ -36,26 +44,13 @@ namespace PokeApiTechDemo
             }
             else
             {
-               HandleSearch(searchText);
-            }
-        }
+                var searchResult = _searchService.SearchForPokemon(searchText);
 
-        private void HandleSearch(string searchText)
-        {
-            var searchResult = _searchService.SearchForPokemon(searchText);
-
-            if (searchResult.Pokemon != null)
-            {
-                PopulateFormFromResult(searchResult.Pokemon, searchResult.Source);
+                if (searchResult.Pokemon != null)
+                {
+                    PopulateFormFromResult(searchResult.Pokemon, searchResult.Source);
+                }
             }
-        }
-        
-        private void lstHistory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var searchText = lstHistory.SelectedItem.ToString();
-            txtSearch.Text = searchText;
-            lblStatus.Text = "Searching from history...";
-            HandleSearch(searchText);
         }
         
         private void PopulateFormFromResult(Pokemon pokemon, string resultSource)
