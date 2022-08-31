@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using PokeApiTechDemo.Settings.Types;
 
 namespace PokeApiTechDemo.Settings
@@ -21,7 +22,7 @@ namespace PokeApiTechDemo.Settings
         {
             if (setting.Type != SettingType.Toggle)
                 return false;
-
+            
             if (setting.Value == "True")
                 return true;
 

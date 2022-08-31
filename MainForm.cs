@@ -13,6 +13,8 @@ using PokeApiTechDemo.Common;
 using PokeApiTechDemo.Common.Types;
 using PokeApiTechDemo.PokeApi;
 using PokeApiTechDemo.PokeApi.Types;
+using PokeApiTechDemo.Settings;
+using PokeApiTechDemo.Settings.Types;
 
 namespace PokeApiTechDemo
 {
@@ -20,12 +22,27 @@ namespace PokeApiTechDemo
     {
         private readonly PokeApiClient _pokeApiClient;
         private readonly CacheService _cacheService;
+        private readonly SettingService _settingService;
+
+        private Dictionary<string, Setting> _settings;
 
         public MainForm()
         {
             InitializeComponent();
             _pokeApiClient = new PokeApiClient();
             _cacheService = new CacheService(new CacheRepository());
+            _settingService = new SettingService(new SettingRepository());
+            _settings = _settingService.LoadSettings();
+            
+            DebugLog("Logging Enabled");
+        }
+
+        private void DebugLog(string text)
+        {
+            if (_settings.TryGetValue("DebugLogging", out var debugLogging));
+            
+            if(debugLogging != null && _settingService.GetToggleValue(debugLogging))
+                Console.WriteLine($"[Debug] {text}");
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -54,6 +71,7 @@ namespace PokeApiTechDemo
 
                 if (cacheEntry.Time.AddMinutes(10) > DateTime.Now)
                 {
+                    DebugLog("Fetching from cache");
                     pokemon = JsonConvert.DeserializeObject<Pokemon>(cacheEntry.Blob);
                     resultSource = ResultSourceType.RESULT_CACHE;
                 }
@@ -75,6 +93,7 @@ namespace PokeApiTechDemo
 
         private Pokemon FetchPokemonFromApi(string searchText)
         {
+            DebugLog("Fetching from API");
             var result = _pokeApiClient.GetPokemon(searchText);
             if (result.HasError)
             {
@@ -100,8 +119,12 @@ namespace PokeApiTechDemo
             pbMainImage.ImageLocation = pokemon.Sprites.FrontDefault;
             
             var randomNumber = Randomiser.GetNumberBetweenOneAndTen();
-            if(randomNumber == 1)
+            DebugLog($"Shiny Random Number: {randomNumber}");
+            if (randomNumber == 1)
+            {
+                DebugLog("Ding, it's a shiny!");
                 pbMainImage.ImageLocation = pokemon.Sprites.FrontShiny;
+            }
             
             //Populate Tree View
             tvDetails.Nodes.Clear();
