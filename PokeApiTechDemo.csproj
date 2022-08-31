@@ -92,6 +92,7 @@
     <ItemGroup>
         <Compile Include="Cache\CacheRepository.cs" />
         <Compile Include="Cache\CacheService.cs" />
+        <Compile Include="Cache\CacheSqlCommands.cs" />
         <Compile Include="Cache\ConnectionStrings.cs" />
         <Compile Include="Cache\Types\CacheEntry.cs" />
         <Compile Include="Common\Randomiser.cs" />

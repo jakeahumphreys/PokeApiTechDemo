@@ -15,10 +15,7 @@ namespace PokeApiTechDemo.Cache
     }
     public class CacheRepository : ICacheRepository
     {
-        public const string INSERT_COMMAND =
-            @"INSERT INTO cache_entries (name, time, blob) VALUES ($name, $time, $blob);";
-        public const string GET_COMMAND = @"SELECT * FROM cache_entries WHERE name = $name";
-        public const string UPDATE_COMMAAND = @"UPDATE cache_entries SET time = $time, blob = $blob WHERE name = $name";
+       
         
         public void Insert(string pokemonName, string jsonBlob)
         {
@@ -32,7 +29,7 @@ namespace PokeApiTechDemo.Cache
                         using (var command = new SQLiteCommand())
                         {
                             command.Connection = connection;
-                            command.CommandText = INSERT_COMMAND;
+                            command.CommandText = CacheSqlCommands.INSERT_COMMAND;
                             command.Parameters.AddWithValue("$name", pokemonName);
                             command.Parameters.AddWithValue("$time", DateTime.Now);
                             command.Parameters.AddWithValue($"blob", jsonBlob);
@@ -62,7 +59,7 @@ namespace PokeApiTechDemo.Cache
                         using (var command = new SQLiteCommand())
                         {
                             command.Connection = connection;
-                            command.CommandText = UPDATE_COMMAAND;
+                            command.CommandText = CacheSqlCommands.UPDATE_COMMAAND;
                             command.Parameters.AddWithValue("$name", cacheEntry.Name);
                             command.Parameters.AddWithValue("$time", DateTime.Now);
                             command.Parameters.AddWithValue($"blob", cacheEntry.Blob);
@@ -92,7 +89,7 @@ namespace PokeApiTechDemo.Cache
                     using (var command = new SQLiteCommand())
                     {
                         command.Connection = connection;
-                        command.CommandText = GET_COMMAND;
+                        command.CommandText = CacheSqlCommands.GET_COMMAND;
                         command.Parameters.AddWithValue("$name", pokemonName);
 
                         using (var reader = command.ExecuteReader())
