@@ -102,6 +102,7 @@ namespace PokeApiTechDemo
             }
             
             var pokemon = result.Pokemon;
+            DebugLog("Caching new result");
             _cacheService.CacheResult(pokemon.Name, JsonConvert.SerializeObject(pokemon));
 
             return pokemon;
@@ -110,6 +111,7 @@ namespace PokeApiTechDemo
         private void PopulateFormFromResult(Pokemon pokemon, string resultSource)
         {
             lblStatus.Text = "Search complete!";
+            DebugLog("Populating form from result");
             
             lstHistory.Items.Add(pokemon.Name);
             //Set JSON Tab
