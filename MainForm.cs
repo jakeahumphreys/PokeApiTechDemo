@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -60,6 +61,9 @@ namespace PokeApiTechDemo
 
         private void SearchForPokemon(string searchText)
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            
             Pokemon pokemon = null;
             string resultSource;
             
@@ -89,6 +93,9 @@ namespace PokeApiTechDemo
 
             if (pokemon != null)
                 PopulateFormFromResult(pokemon, resultSource);
+            
+            stopwatch.Stop();
+            DebugLog($"Fetch took {stopwatch.ElapsedMilliseconds} ms");
         }
 
         private Pokemon FetchPokemonFromApi(string searchText)
