@@ -97,6 +97,7 @@
         <Compile Include="Cache\Types\CacheEntry.cs" />
         <Compile Include="Common\Randomiser.cs" />
         <Compile Include="Common\Types\ResultSourceType.cs" />
+        <Compile Include="Common\ValidationHelper.cs" />
         <Compile Include="MainForm.cs">
             <SubType>Form</SubType>
         </Compile>
