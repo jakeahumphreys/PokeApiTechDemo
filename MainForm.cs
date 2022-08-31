@@ -29,15 +29,7 @@ namespace PokeApiTechDemo
             _settingService = new SettingService(new SettingRepository());
             _settings = _settingService.LoadSettings();
         }
-
-        private void DebugLog(string text)
-        {
-            if (_settings.TryGetValue("DebugLogging", out var debugLogging));
-            
-            if(debugLogging != null && _settingService.GetToggleValue(debugLogging))
-                Console.WriteLine($"[Debug] {text}");
-        }
-
+        
         private void btnSearch_Click(object sender, EventArgs e)
         {
             var searchText = txtSearch.Text;
@@ -74,8 +66,7 @@ namespace PokeApiTechDemo
         private void PopulateFormFromResult(Pokemon pokemon, string resultSource)
         {
             lblStatus.Text = "Search complete!";
-            DebugLog("Populating form from result");
-            
+
             lstHistory.Items.Add(pokemon.Name);
             //Set JSON Tab
             txtJson.Text = JsonConvert.SerializeObject(pokemon, Formatting.Indented);
