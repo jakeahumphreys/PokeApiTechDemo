@@ -7,7 +7,7 @@ namespace PokeApiTechDemo.Common
         public static int GetNumberBetweenOneAndTen()
         {
             var random = new Random();
-            return random.Next(10);
+            return random.Next(1,10);
         }
     }
 }
