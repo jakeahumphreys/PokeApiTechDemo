@@ -16,5 +16,16 @@ namespace PokeApiTechDemo.Settings
         {
             return _repository.GetAll();
         }
+
+        public bool GetToggleValue(Setting setting)
+        {
+            if (setting.Type != SettingType.Toggle)
+                return false;
+
+            if (setting.Value == "True")
+                return true;
+
+            return false;
+        }
     }
 }

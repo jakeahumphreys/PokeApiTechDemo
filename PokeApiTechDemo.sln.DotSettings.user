@@ -8,6 +8,8 @@
     &lt;ProjectFile&gt;56C30AE6-BE7D-4EA7-B262-C5AAD64FC7D3/d:Cache/d:GivenASearchForEntries/f:WhenTheCacheHasAnEntry.cs&lt;/ProjectFile&gt;&#xD;
     &lt;ProjectFile&gt;56C30AE6-BE7D-4EA7-B262-C5AAD64FC7D3/d:Cache/d:GivenAnEntryToCache/f:WhenNoEntryAlreadyExists.cs&lt;/ProjectFile&gt;&#xD;
     &lt;ProjectFolder&gt;56C30AE6-BE7D-4EA7-B262-C5AAD64FC7D3/d:Cache/d:GivenAnEntryToCache&lt;/ProjectFolder&gt;&#xD;
+    &lt;ProjectFile&gt;56C30AE6-BE7D-4EA7-B262-C5AAD64FC7D3/d:Settings/d:GivenTheSettingService/f:WhenLoadSettingsIsCalled.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;ProjectFile&gt;56C30AE6-BE7D-4EA7-B262-C5AAD64FC7D3/d:Settings/d:GivenTheSettingService/f:WhenGetToggleValueIsCalled.cs&lt;/ProjectFile&gt;&#xD;
   &lt;/Or&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=PokeApiTechDemo_002FMainForm/@EntryIndexedValue">True</s:Boolean>
