@@ -7,7 +7,7 @@ namespace PokeApiTechDemo.Cache
 {
     public class CacheService
     {
-        private readonly CacheRepository _repository;
+        private readonly ICacheRepository _repository;
 
         public CacheService()
         {

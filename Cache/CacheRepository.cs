@@ -7,7 +7,13 @@ using PokeApiTechDemo.Cache.Types;
 
 namespace PokeApiTechDemo.Cache
 {
-    public class CacheRepository
+    public interface ICacheRepository
+    {
+        void Insert(string pokemonName, string jsonBlob);
+        void Update(CacheEntry cacheEntry);
+        List<CacheEntry> GetEntriesForName(string pokemonName);
+    }
+    public class CacheRepository : ICacheRepository
     {
         public const string INSERT_COMMAND =
             @"INSERT INTO cache_entries (name, time, blob) VALUES ($name, $time, $blob);";
