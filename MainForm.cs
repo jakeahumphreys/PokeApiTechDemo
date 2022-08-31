@@ -69,15 +69,19 @@ namespace PokeApiTechDemo
                 resultSource = ResultSourceType.RESULT_API;
             }
 
-            PopulateFormFromResult(pokemon, resultSource);
+            if (pokemon != null)
+                PopulateFormFromResult(pokemon, resultSource);
         }
 
         private Pokemon FetchPokemonFromApi(string searchText)
         {
             var result = _pokeApiClient.GetPokemon(searchText);
             if (result.HasError)
+            {
                 MessageBox.Show(result.Error.Message);
-
+                return null;
+            }
+            
             var pokemon = result.Pokemon;
             _cacheService.CacheResult(pokemon.Name, JsonConvert.SerializeObject(pokemon));
 
