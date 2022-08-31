@@ -60,11 +60,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lstHistory);
-            this.groupBox1.Location = new System.Drawing.Point(14, 75);
+            this.groupBox1.Location = new System.Drawing.Point(14, 70);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox1.Size = new System.Drawing.Size(251, 153);
+            this.groupBox1.Size = new System.Drawing.Size(251, 148);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "History";
@@ -77,7 +77,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox2.Size = new System.Drawing.Size(260, 55);
+            this.groupBox2.Size = new System.Drawing.Size(260, 53);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fetch Pokémon";
@@ -103,7 +103,7 @@
             // 
             // lblStatus
             // 
-            this.lblStatus.Location = new System.Drawing.Point(14, 429);
+            this.lblStatus.Location = new System.Drawing.Point(13, 427);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(127, 16);
@@ -154,11 +154,11 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.txtJson);
-            this.groupBox4.Location = new System.Drawing.Point(14, 232);
+            this.groupBox4.Location = new System.Drawing.Point(13, 224);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox4.Size = new System.Drawing.Size(251, 192);
+            this.groupBox4.Size = new System.Drawing.Size(251, 200);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Raw JSON";
@@ -168,7 +168,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(487, 452);
+            this.ClientSize = new System.Drawing.Size(487, 451);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.groupBox3);

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using PokeApiTechDemo.Cache;
@@ -43,7 +44,31 @@ namespace PokeApiTechDemo
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SearchForPokemon(txtSearch.Text);
+            var searchText = txtSearch.Text;
+
+            if (!IsSearchTextValid(searchText))
+                MessageBox.Show("Your search text isn't quite valid. Must be > 3 characters and contain no numbers or special characters.",
+                    "Validation Error");
+            else
+                SearchForPokemon(txtSearch.Text);
+        }
+
+        private bool IsSearchTextValid(string searchText)
+        {
+            if (string.IsNullOrWhiteSpace(searchText))
+                return false;
+
+            if (searchText.Length < 3) //No pokemon with less than 3 character names, I think
+                return false;
+
+            if (searchText.Any(c => char.IsDigit(c)))
+                return false;
+
+            var regex = new Regex(@"[a-zA-Z]");
+            if (!regex.IsMatch(searchText))
+                return false;
+
+            return true;
         }
         
         private void lstHistory_SelectedIndexChanged(object sender, EventArgs e)
