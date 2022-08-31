@@ -21,6 +21,8 @@ In this example all the data access is provided using raw SQL. This is to demons
 
 The data logic is stored in a repository class, this means I can implement an interface here and easily unit test the business logic in the service class higher up if necessary. It also means I could go a little further and look to implement the repository pattern, but as this is a single data table for a small cache, it's not strictly needed here.
 
+I've also added a simple settings store, technically windows forms application can store settings internally in a file alongside the exe but to demonstrate knowledge of SQL I've made this a table. This is more applicable if the application was powered off the web or the data stored off-machine.
+
 The Data Access logic is also unit tested, because why not.
 
 ## Improvements
@@ -30,4 +32,6 @@ No application is perfect, especially this one as it was written fairly quickly 
 - For persistent data I'd like to use Postgres. Primarily because postgres has baked in datetime and JSON blob support.
 	- Let's go further! Postgres could handle a larger scale cache to exist more of an audit and then a Redis layer could be implemented on top to allow super fast cache retrieval.
 - SPA - This could easily be implemented as an SPA, currently as a windows application it's rather limited but rewriting it as an SPA would make the application work on any number of platforms. It could even be wrapped with an electron shell and run on the desktop that way.
+
+I'd also eventually make this application more self sufficient, currently if you were to download it without the DB, it makes no attempt to validate and rectify any errors with the data structure. This would be easily solved by making the application check the requried files / tables are present at load, and seed them if not.
 
