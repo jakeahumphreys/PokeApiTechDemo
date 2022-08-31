@@ -1,5 +1,9 @@
 # Poke API Tech Demo
 
+<div align="center">
+<img src="https://i.imgur.com/rf6WdtT.png" alt="Markdown Monster icon" style="margin-right: 10px; border-style: solid; margin-bottom: 20px;" width="400" height="350"/>
+</div>
+
 I wrote this application as a small demonstration for an interview for Radius Payment Solutions to act as a brief showcase of some of the skills I have. Naturally it doesn't cover everything, but I've aimed to tick a few things of the job requirements list. Namely:
 
 - .Net 4.7 (Although this is written in 4.8).
