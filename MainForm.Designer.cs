@@ -32,9 +32,9 @@
             this.lstHistory = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblStatus = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.pbMainImage = new System.Windows.Forms.PictureBox();
             this.tvDetails = new System.Windows.Forms.TreeView();
@@ -82,15 +82,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fetch Pokémon";
             // 
-            // lblStatus
-            // 
-            this.lblStatus.Location = new System.Drawing.Point(14, 429);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(127, 16);
-            this.lblStatus.TabIndex = 2;
-            this.lblStatus.Text = "Ready...";
-            // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(178, 23);
@@ -109,6 +100,15 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(162, 22);
             this.txtSearch.TabIndex = 0;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Location = new System.Drawing.Point(14, 429);
+            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(127, 16);
+            this.lblStatus.TabIndex = 2;
+            this.lblStatus.Text = "Ready...";
             // 
             // groupBox3
             // 
