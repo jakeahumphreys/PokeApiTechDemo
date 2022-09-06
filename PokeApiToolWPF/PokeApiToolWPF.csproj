@@ -14,8 +14,8 @@
 
     <ItemGroup>
       <PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta2" />
-      <PackageReference Include="Stub.System.Data.SQLite.Core.NetFramework" Version="1.0.116" />
       <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+      <PackageReference Include="System.Data.SQLite" Version="1.0.116" />
     </ItemGroup>
 
     <ItemGroup>
