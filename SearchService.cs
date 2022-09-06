@@ -4,11 +4,11 @@ using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using PokeApiTechDemo.Cache;
 using PokeApiTechDemo.Common;
 using PokeApiTechDemo.Common.Types;
-using PokeApiTechDemo.Settings;
-using PokeApiTechDemo.Settings.Types;
+using PokeApiTechDemo.Data.Cache;
+using PokeApiTechDemo.Data.Settings;
+using PokeApiTechDemo.Data.Settings.Types;
 using PokemonApiClient;
 using PokemonApiClient.Types;
 

@@ -90,15 +90,20 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Cache\CacheRepository.cs" />
-        <Compile Include="Cache\CacheService.cs" />
-        <Compile Include="Cache\CacheSqlCommands.cs" />
-        <Compile Include="Cache\ConnectionStrings.cs" />
-        <Compile Include="Cache\Types\CacheEntry.cs" />
         <Compile Include="Common\Randomiser.cs" />
         <Compile Include="Common\Types\ResultSourceType.cs" />
         <Compile Include="Common\Types\SearchResult.cs" />
         <Compile Include="Common\ValidationHelper.cs" />
+        <Compile Include="Data\Cache\CacheRepository.cs" />
+        <Compile Include="Data\Cache\CacheService.cs" />
+        <Compile Include="Data\Cache\CacheSqlCommands.cs" />
+        <Compile Include="Data\Cache\Types\CacheEntry.cs" />
+        <Compile Include="Data\ConnectionStrings.cs" />
+        <Compile Include="Data\Settings\SettingRepository.cs" />
+        <Compile Include="Data\Settings\SettingService.cs" />
+        <Compile Include="Data\Settings\SettingSqlCommands.cs" />
+        <Compile Include="Data\Settings\Types\Setting.cs" />
+        <Compile Include="Data\Settings\Types\SettingType.cs" />
         <Compile Include="MainForm.cs">
             <SubType>Form</SubType>
         </Compile>
@@ -108,11 +113,6 @@
         <Compile Include="SearchService.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="Settings\SettingRepository.cs" />
-        <Compile Include="Settings\SettingService.cs" />
-        <Compile Include="Settings\SettingSqlCommands.cs" />
-        <Compile Include="Settings\Types\Setting.cs" />
-        <Compile Include="Settings\Types\SettingType.cs" />
         <EmbeddedResource Include="MainForm.resx">
           <DependentUpon>MainForm.cs</DependentUpon>
         </EmbeddedResource>

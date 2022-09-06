@@ -1,4 +1,4 @@
-﻿namespace PokeApiTechDemo.Cache
+﻿namespace PokeApiTechDemo.Data
 {
     public static class ConnectionStrings
     {

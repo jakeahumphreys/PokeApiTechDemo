@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
-using PokeApiTechDemo.Settings;
-using PokeApiTechDemo.Settings.Types;
+using PokeApiTechDemo.Data.Settings;
+using PokeApiTechDemo.Data.Settings.Types;
 
 namespace PokeApiTechDemo.Tests.Settings.GivenTheSettingService
 {

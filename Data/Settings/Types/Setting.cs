@@ -1,4 +1,4 @@
-﻿namespace PokeApiTechDemo.Settings.Types
+﻿namespace PokeApiTechDemo.Data.Settings.Types
 {
     public class Setting
     {

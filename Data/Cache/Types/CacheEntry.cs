@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PokeApiTechDemo.Cache.Types
+namespace PokeApiTechDemo.Data.Cache.Types
 {
     public class CacheEntry
     {

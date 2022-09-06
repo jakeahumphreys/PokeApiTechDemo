@@ -1,4 +1,4 @@
-﻿namespace PokeApiTechDemo.Settings
+﻿namespace PokeApiTechDemo.Data.Settings
 {
     public static class SettingSqlCommands
     {

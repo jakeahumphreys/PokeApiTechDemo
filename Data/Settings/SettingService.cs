@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using PokeApiTechDemo.Settings.Types;
+using PokeApiTechDemo.Data.Settings.Types;
 
-namespace PokeApiTechDemo.Settings
+namespace PokeApiTechDemo.Data.Settings
 {
     public sealed class SettingService
     {

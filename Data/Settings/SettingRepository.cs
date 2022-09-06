@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Windows.Forms;
-using PokeApiTechDemo.Cache;
-using PokeApiTechDemo.Settings.Types;
+using PokeApiTechDemo.Data.Settings.Types;
 
-namespace PokeApiTechDemo.Settings
+namespace PokeApiTechDemo.Data.Settings
 {
     public interface ISettingRepository
     {

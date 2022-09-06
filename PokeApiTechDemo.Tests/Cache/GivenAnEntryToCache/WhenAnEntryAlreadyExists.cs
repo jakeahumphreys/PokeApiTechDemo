@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
-using PokeApiTechDemo.Cache;
-using PokeApiTechDemo.Cache.Types;
+using PokeApiTechDemo.Data.Cache;
+using PokeApiTechDemo.Data.Cache.Types;
 
 namespace PokeApiTechDemo.Tests.Cache.GivenAnEntryToCache
 {
