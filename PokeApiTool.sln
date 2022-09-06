@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeApiTool.Tests", "PokeAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonApiClient", "PokemonApiClient\PokemonApiClient.csproj", "{D16A56CD-DEF7-49DC-9486-F5511BB808F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeApiToolWPF", "PokeApiToolWPF\PokeApiToolWPF.csproj", "{F1ACFA4C-8440-47E3-897E-FEE95C4EC3B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{D16A56CD-DEF7-49DC-9486-F5511BB808F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D16A56CD-DEF7-49DC-9486-F5511BB808F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D16A56CD-DEF7-49DC-9486-F5511BB808F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1ACFA4C-8440-47E3-897E-FEE95C4EC3B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1ACFA4C-8440-47E3-897E-FEE95C4EC3B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1ACFA4C-8440-47E3-897E-FEE95C4EC3B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1ACFA4C-8440-47E3-897E-FEE95C4EC3B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

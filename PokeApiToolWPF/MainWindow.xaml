@@ -1,0 +1,28 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Class="PokeApiToolWPF.MainWindow"
+        Title="PokéApi Tool"
+        Height="600"
+        Width="564" Background="#FFBF4949">
+    <Grid HorizontalAlignment="Center" Height="562" Margin="0,10,0,0" VerticalAlignment="Top" Width="544">
+        <GroupBox HorizontalAlignment="Left" Height="47" Header="Fetch Pokémon" Margin="10,0,0,0" VerticalAlignment="Top" Width="262">
+            <Button Content="Search" HorizontalAlignment="Left" Height="23" Margin="175,0,0,0" VerticalAlignment="Top" Width="73" Name="btnSearchPokemon" Click="BtnSearch_OnClick"/>
+        </GroupBox>
+        <TextBox HorizontalAlignment="Left" Height="19" Margin="21,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Name="txtPokemonName"/>
+        <GroupBox HorizontalAlignment="Left" Height="229" Header="History" Margin="10,52,0,0" VerticalAlignment="Top" Width="262"/>
+        <ListBox HorizontalAlignment="Left" Height="195" Margin="21,75,0,0" VerticalAlignment="Top" Width="241" Name="lstHistory" SelectionChanged="LstHistory_OnSelectionChanged"/>
+        <GroupBox HorizontalAlignment="Left" Height="253" Header="Raw JSON" Margin="10,286,0,0" VerticalAlignment="Top" Width="262">
+            <RichTextBox HorizontalAlignment="Left" Height="230" Width="252" Name="txtJson">
+                <FlowDocument>
+                </FlowDocument>
+            </RichTextBox>
+        </GroupBox>
+        <GroupBox HorizontalAlignment="Left" Height="539" Header="GroupBox" Margin="277,0,0,23" VerticalAlignment="Bottom" Width="257">
+            <Grid HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="247">
+                <Image HorizontalAlignment="Left" Height="250" Margin="10,10,0,0" VerticalAlignment="Top" Width="224" Name="pbImage"/>
+                <TreeView HorizontalAlignment="Center" Height="236" Margin="0,274,0,0" VerticalAlignment="Top" Width="227" Name="tvDetails"/>
+            </Grid>
+        </GroupBox>
+        <Label Content="Ready..." HorizontalAlignment="Left" Height="31" Margin="21,539,0,0" VerticalAlignment="Top" Width="95" AutomationProperties.Name="lblStatus" Name="lblStatus"/>
+    </Grid>
+</Window>
