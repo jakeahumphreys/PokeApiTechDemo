@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A590856D-C9F4-4288-8725-ABE29508D87C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>PokeApiTechDemo</RootNamespace>
     <AssemblyName>PokeApiTechDemo</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
