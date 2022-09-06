@@ -26,7 +26,7 @@ namespace PokeApiTechDemo
         
         private void DebugLog(string text)
         {
-            if (Properties.Settings.Default.DebugLogging);
+            if (Properties.Settings.Default.DebugLogging)
                 Console.WriteLine($"[Debug] {text}");
         }
         
