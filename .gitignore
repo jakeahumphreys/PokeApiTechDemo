@@ -1,6 +1,13 @@
 ﻿# Created by https://www.toptal.com/developers/gitignore/api/executable,rider,windows,visualstudio
 # Edit at https://www.toptal.com/developers/gitignore?templates=executable,rider,windows,visualstudio
 
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
+
 ### Executable ###
 *.app
 *.bat
