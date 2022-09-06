@@ -99,11 +99,6 @@
     <Compile Include="Data\Cache\CacheSqlCommands.cs" />
     <Compile Include="Data\Cache\Types\CacheEntry.cs" />
     <Compile Include="Data\ConnectionStrings.cs" />
-    <Compile Include="Data\Settings\SettingRepository.cs" />
-    <Compile Include="Data\Settings\SettingService.cs" />
-    <Compile Include="Data\Settings\SettingSqlCommands.cs" />
-    <Compile Include="Data\Settings\Types\Setting.cs" />
-    <Compile Include="Data\Settings\Types\SettingType.cs" />
     <Compile Include="Data\Validation\DataValidationService.cs" />
     <Compile Include="Data\Validation\DataValidationSqlCommands.cs" />
     <Compile Include="MainForm.cs">

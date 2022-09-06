@@ -8,7 +8,6 @@ namespace PokeApiTechDemo.Data.Validation
         public void PerformDataValidation()
         {
             CreateTableWithCommand(DataValidationSqlCommands.CREATE_CACHE_TABLE);
-            CreateTableWithCommand(DataValidationSqlCommands.CREATE_SETTINGS_TABLE);
         }
 
         private void CreateTableWithCommand(string commandString)

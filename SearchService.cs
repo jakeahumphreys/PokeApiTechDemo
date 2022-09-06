@@ -7,8 +7,6 @@ using Newtonsoft.Json;
 using PokeApiTechDemo.Common;
 using PokeApiTechDemo.Common.Types;
 using PokeApiTechDemo.Data.Cache;
-using PokeApiTechDemo.Data.Settings;
-using PokeApiTechDemo.Data.Settings.Types;
 using PokemonApiClient;
 using PokemonApiClient.Types;
 
@@ -18,13 +16,11 @@ namespace PokeApiTechDemo
     {
         private readonly PokeApiClient _pokeApiClient;
         private readonly CacheService _cacheService;
-        private readonly SettingService _settingService;
 
         public SearchService()
         {
             _pokeApiClient = new PokeApiClient();
             _cacheService = new CacheService(new CacheRepository());
-            _settingService = new SettingService(new SettingRepository());
             DebugLog("Logging Enabled");
         }
         
