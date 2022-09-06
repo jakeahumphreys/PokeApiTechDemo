@@ -1,16 +1,20 @@
-# Poke API Tech Demo
+# PokéApi Tool
 
 <div align="center">
 <img src="https://i.imgur.com/rf6WdtT.png" alt="Markdown Monster icon" style="margin-right: 10px; border-style: solid; margin-bottom: 20px;" width="400" height="350"/>
 </div>
+
+# Background
 
 I wrote this application as a small demonstration for an interview for Radius Payment Solutions to act as a brief showcase of some of the skills I have. Naturally it doesn't cover everything, but I've aimed to tick a few things of the job requirements list. Namely:
 
 - .Net 4.7 (Although this is written in 4.8).
 - C#.
 - SQL Knowledge.
-	- Knowledge of relational databases.
+    - Knowledge of relational databases.
 - REST.
+
+Following the initial interview I continued to develop the application, added some polish and released a 1.0.
 
 
 # What does this application do?
@@ -25,9 +29,22 @@ In this example all the data access is provided using raw SQL. This is to demons
 
 The data logic is stored in a repository class, this means I can implement an interface here and easily unit test the business logic in the service class higher up if necessary. It also means I could go a little further and look to implement the repository pattern, but as this is a single data table for a small cache, it's not strictly needed here.
 
-I've also added a simple settings store, technically windows forms application can store settings internally in a file alongside the exe but to demonstrate knowledge of SQL I've made this a table. This is more applicable if the application was powered off the web or the data stored off-machine.
+~~I've also added a simple settings store, technically windows forms application can store settings internally in a file alongside the exe but to demonstrate knowledge of SQL I've made this a table. This is more applicable if the application was powered off the web or the data stored off-machine.~~
+(Settings store was fairly useless so I swapped it back out for a settings file).
 
 The Data Access logic is also unit tested, because why not.
+
+## Planned Features
+> ❗There's no certainty as to if or when these features will be implemented.
+
+- Settings menu, currently they're hidden and only edited at the development stage.
+  - Toggleable debug logs.
+  - Edit Shiny Chance.
+  - Edit Cache grace period.
+
+
+- Detailed view of Pokémon, currently it's fairly barebones.
+- Type effectiveness matrix or some way to show which pokémon types they're effective against or weak to.
 
 ## Improvements
 
