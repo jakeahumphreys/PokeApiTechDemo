@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeApiTool", "PokeApiTool.csproj", "{A590856D-C9F4-4288-8725-ABE29508D87C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeApiTool", "PokeApiTool\PokeApiTool.csproj", "{A590856D-C9F4-4288-8725-ABE29508D87C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeApiTool.Tests", "PokeApiTool.Tests\PokeApiTool.Tests.csproj", "{56C30AE6-BE7D-4EA7-B262-C5AAD64FC7D3}"
 EndProject
