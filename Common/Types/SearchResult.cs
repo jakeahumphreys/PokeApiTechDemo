@@ -1,6 +1,6 @@
 ﻿using PokemonApiClient.Types;
 
-namespace PokeApiTechDemo.Common.Types
+namespace PokeApiTool.Common.Types
 {
     public sealed class SearchResult
     {

@@ -1,4 +1,4 @@
-﻿namespace PokeApiTechDemo
+﻿namespace PokeApiTool
 {
     partial class MainForm
     {

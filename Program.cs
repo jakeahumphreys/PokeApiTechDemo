@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using PokeApiTechDemo.Data.Validation;
+using PokeApiTool.Data.Validation;
 
-namespace PokeApiTechDemo
+namespace PokeApiTool
 {
     static class Program
     {

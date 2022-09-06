@@ -1,4 +1,4 @@
-﻿namespace PokeApiTechDemo.Data
+﻿namespace PokeApiTool.Data
 {
     public static class ConnectionStrings
     {

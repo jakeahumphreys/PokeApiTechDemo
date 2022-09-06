@@ -1,4 +1,4 @@
-﻿namespace PokeApiTechDemo.Common.Types
+﻿namespace PokeApiTool.Common.Types
 {
     public static class ResultSourceType
     {

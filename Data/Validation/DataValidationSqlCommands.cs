@@ -1,4 +1,4 @@
-﻿namespace PokeApiTechDemo.Data.Validation
+﻿namespace PokeApiTool.Data.Validation
 {
     public static class DataValidationSqlCommands
     {

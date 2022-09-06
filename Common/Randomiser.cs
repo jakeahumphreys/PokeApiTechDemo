@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PokeApiTechDemo.Common
+namespace PokeApiTool.Common
 {
     public static class Randomiser
     {

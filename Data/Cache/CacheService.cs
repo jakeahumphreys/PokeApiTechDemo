@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using PokeApiTechDemo.Data.Cache.Types;
+using PokeApiTool.Data.Cache.Types;
 
-namespace PokeApiTechDemo.Data.Cache
+namespace PokeApiTool.Data.Cache
 {
     public class CacheService
     {

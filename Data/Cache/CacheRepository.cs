@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.Windows.Forms;
-using PokeApiTechDemo.Data.Cache.Types;
+using PokeApiTool.Data.Cache.Types;
 
-namespace PokeApiTechDemo.Data.Cache
+namespace PokeApiTool.Data.Cache
 {
     public interface ICacheRepository
     {

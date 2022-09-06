@@ -1,4 +1,4 @@
-﻿namespace PokeApiTechDemo.Data.Cache
+﻿namespace PokeApiTool.Data.Cache
 {
     public static class CacheSqlCommands
     {

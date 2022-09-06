@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using PokeApiTechDemo.Common;
+using PokeApiTool.Common;
 using PokemonApiClient.Types;
 
-namespace PokeApiTechDemo
+namespace PokeApiTool
 {
     public partial class MainForm : Form
     {

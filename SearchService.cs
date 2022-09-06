@@ -4,13 +4,13 @@ using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using PokeApiTechDemo.Common;
-using PokeApiTechDemo.Common.Types;
-using PokeApiTechDemo.Data.Cache;
+using PokeApiTool.Common;
+using PokeApiTool.Common.Types;
+using PokeApiTool.Data.Cache;
 using PokemonApiClient;
 using PokemonApiClient.Types;
 
-namespace PokeApiTechDemo
+namespace PokeApiTool
 {
     public class SearchService
     {
