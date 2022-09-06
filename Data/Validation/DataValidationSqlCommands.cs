@@ -2,9 +2,6 @@
 {
     public static class DataValidationSqlCommands
     {
-        public const string SELECT_TABLE =
-            @"SELECT 1 FROM sqlite_master WHERE type='table' AND name = $tableName";
-
         public const string CREATE_CACHE_TABLE = @"create table if not exists cache_entries
                                                     (
                                                         name TEXT not null,
