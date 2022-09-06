@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace PokemonApiClient.Types
+namespace PokemonApiClient.ErrorHandling
 {
     public class Error
     {

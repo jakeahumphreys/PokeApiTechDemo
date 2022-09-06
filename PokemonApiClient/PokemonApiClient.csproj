@@ -43,11 +43,11 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="ErrorHandling\Error.cs" />
         <Compile Include="PokeApiClient.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Types\Ability.cs" />
         <Compile Include="Types\AbilityMeta.cs" />
-        <Compile Include="Types\Error.cs" />
         <Compile Include="Types\GetPokemonResult.cs" />
         <Compile Include="Types\Move.cs" />
         <Compile Include="Types\MoveMeta.cs" />
