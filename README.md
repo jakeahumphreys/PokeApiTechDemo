@@ -37,5 +37,5 @@ No application is perfect, especially this one as it was written fairly quickly 
 	- Let's go further! Postgres could handle a larger scale cache to exist more of an audit and then a Redis layer could be implemented on top to allow super fast cache retrieval.
 - SPA - This could easily be implemented as an SPA, currently as a windows application it's rather limited but rewriting it as an SPA would make the application work on any number of platforms. It could even be wrapped with an electron shell and run on the desktop that way.
 
-I'd also eventually make this application more self sufficient, currently if you were to download it without the DB, it makes no attempt to validate and rectify any errors with the data structure. This would be easily solved by making the application check the requried files / tables are present at load, and seed them if not.
+I'd also eventually make this application more self sufficient, currently if you were to download it without the DB, it makes no attempt to validate and rectify any errors with the data structure. This would be easily solved by making the application check the required files / tables are present at load, and seed them if not.
 
