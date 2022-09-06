@@ -19,22 +19,18 @@ namespace PokeApiTechDemo
         private readonly PokeApiClient _pokeApiClient;
         private readonly CacheService _cacheService;
         private readonly SettingService _settingService;
-        private readonly Dictionary<string, Setting> _settings;
 
         public SearchService()
         {
             _pokeApiClient = new PokeApiClient();
             _cacheService = new CacheService(new CacheRepository());
             _settingService = new SettingService(new SettingRepository());
-            _settings = _settingService.LoadSettings();
             DebugLog("Logging Enabled");
         }
         
         private void DebugLog(string text)
         {
-            if (_settings.TryGetValue("DebugLogging", out var debugLogging));
-            
-            if(debugLogging != null && _settingService.GetToggleValue(debugLogging))
+            if (Properties.Settings.Default.DebugLogging);
                 Console.WriteLine($"[Debug] {text}");
         }
         

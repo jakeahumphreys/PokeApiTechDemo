@@ -4,6 +4,7 @@ C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\PokeApiTechDemo.pdb
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\EntityFramework.dll
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\PokemonApiClient.dll
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\System.Buffers.dll
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\System.Data.SQLite.dll
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\System.Data.SQLite.EF6.dll
@@ -11,6 +12,7 @@ C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\System.Data.SQLite.Linq.d
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\System.Memory.dll
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\PokemonApiClient.pdb
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\EntityFramework.xml
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\Newtonsoft.Json.xml
@@ -28,5 +30,3 @@ C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.csproj.Co
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.csproj.CopyComplete
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.exe
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.pdb
-C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\PokemonApiClient.dll
-C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\PokemonApiClient.pdb
