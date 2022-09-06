@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using PokeApiTechDemo.Common;
-using PokeApiTechDemo.PokeApi.Types;
+using PokemonApiClient.Types;
 
 namespace PokeApiTechDemo
 {

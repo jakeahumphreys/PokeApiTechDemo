@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace PokeApiTechDemo.PokeApi.Types
+namespace PokemonApiClient.Types
 {
     public class Pokemon
     {

@@ -106,21 +106,6 @@
             <DependentUpon>MainForm.cs</DependentUpon>
         </Compile>
         <Compile Include="SearchService.cs" />
-        <Compile Include="PokeApi\PokeApiClient.cs" />
-        <Compile Include="PokeApi\Types\Ability.cs" />
-        <Compile Include="PokeApi\Types\AbilityMeta.cs" />
-        <Compile Include="PokeApi\Types\Error.cs" />
-        <Compile Include="PokeApi\Types\GetPokemonResult.cs" />
-        <Compile Include="PokeApi\Types\Move.cs" />
-        <Compile Include="PokeApi\Types\MoveMeta.cs" />
-        <Compile Include="PokeApi\Types\Pokemon.cs" />
-        <Compile Include="PokeApi\Types\PokemonForm.cs" />
-        <Compile Include="PokeApi\Types\Species.cs" />
-        <Compile Include="PokeApi\Types\Sprite.cs" />
-        <Compile Include="PokeApi\Types\Stat.cs" />
-        <Compile Include="PokeApi\Types\StatMeta.cs" />
-        <Compile Include="PokeApi\Types\Type.cs" />
-        <Compile Include="PokeApi\Types\TypeMeta.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Settings\SettingRepository.cs" />
@@ -153,6 +138,12 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="PokemonApiClient\PokemonApiClient.csproj">
+        <Project>{d16a56cd-def7-49dc-9486-f5511bb808f8}</Project>
+        <Name>PokemonApiClient</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

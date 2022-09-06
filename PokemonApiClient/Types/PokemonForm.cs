@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace PokeApiTechDemo.PokeApi.Types
+namespace PokemonApiClient.Types
 {
-    public class Move
+    public class PokemonForm
     {
         [JsonProperty("name")]
         public string Name { get; set; }

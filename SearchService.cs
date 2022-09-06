@@ -7,10 +7,10 @@ using Newtonsoft.Json;
 using PokeApiTechDemo.Cache;
 using PokeApiTechDemo.Common;
 using PokeApiTechDemo.Common.Types;
-using PokeApiTechDemo.PokeApi;
-using PokeApiTechDemo.PokeApi.Types;
 using PokeApiTechDemo.Settings;
 using PokeApiTechDemo.Settings.Types;
+using PokemonApiClient;
+using PokemonApiClient.Types;
 
 namespace PokeApiTechDemo
 {

@@ -28,3 +28,5 @@ C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.csproj.Co
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.csproj.CopyComplete
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.exe
 C:\Users\jakeh\RiderProjects\PokeApiTechDemo\obj\Debug\PokeApiTechDemo.pdb
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\PokemonApiClient.dll
+C:\Users\jakeh\RiderProjects\PokeApiTechDemo\bin\Debug\PokemonApiClient.pdb

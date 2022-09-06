@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeApiTechDemo", "PokeApiT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokeApiTechDemo.Tests", "PokeApiTechDemo.Tests\PokeApiTechDemo.Tests.csproj", "{56C30AE6-BE7D-4EA7-B262-C5AAD64FC7D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonApiClient", "PokemonApiClient\PokemonApiClient.csproj", "{D16A56CD-DEF7-49DC-9486-F5511BB808F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{56C30AE6-BE7D-4EA7-B262-C5AAD64FC7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56C30AE6-BE7D-4EA7-B262-C5AAD64FC7D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56C30AE6-BE7D-4EA7-B262-C5AAD64FC7D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D16A56CD-DEF7-49DC-9486-F5511BB808F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D16A56CD-DEF7-49DC-9486-F5511BB808F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D16A56CD-DEF7-49DC-9486-F5511BB808F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D16A56CD-DEF7-49DC-9486-F5511BB808F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

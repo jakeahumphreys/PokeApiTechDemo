@@ -1,4 +1,4 @@
-﻿using PokeApiTechDemo.PokeApi.Types;
+﻿using PokemonApiClient.Types;
 
 namespace PokeApiTechDemo.Common.Types
 {

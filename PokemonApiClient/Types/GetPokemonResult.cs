@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace PokeApiTechDemo.PokeApi.Types
+namespace PokemonApiClient.Types
 {
     public class GetPokemonResult
     {
