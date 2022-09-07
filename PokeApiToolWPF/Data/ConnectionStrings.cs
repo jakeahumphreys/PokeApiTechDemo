@@ -1,4 +1,4 @@
-﻿namespace PokeApiTool.Data
+﻿namespace PokeApiToolWPF.Data
 {
     public static class ConnectionStrings
     {

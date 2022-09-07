@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Data.SQLite;
+using PokeApiTool.Data;
 
-namespace PokeApiTool.Data.Validation
+namespace PokeApiToolWPF.Data.Validation
 {
     public class DataValidationService
     {

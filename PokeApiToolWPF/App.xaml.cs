@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using PokeApiTool.Data.Validation;
+using PokeApiToolWPF.Data.Validation;
 
 namespace PokeApiToolWPF
 {

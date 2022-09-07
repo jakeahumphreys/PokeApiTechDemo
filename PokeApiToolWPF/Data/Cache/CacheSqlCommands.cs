@@ -1,4 +1,4 @@
-﻿namespace PokeApiTool.Data.Cache
+﻿namespace PokeApiToolWPF.Data.Cache
 {
     public static class CacheSqlCommands
     {
