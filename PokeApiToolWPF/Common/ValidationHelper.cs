@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace PokeApiTool.Common
+namespace PokeApiToolWPF.Common
 {
     public static class ValidationHelper
     {
