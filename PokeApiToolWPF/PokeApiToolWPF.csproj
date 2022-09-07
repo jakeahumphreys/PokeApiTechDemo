@@ -6,6 +6,7 @@
         <Nullable>enable</Nullable>
         <UseWPF>true</UseWPF>
         <ApplicationIcon>Poke-Ball.ico</ApplicationIcon>
+        <AssemblyName>PokéApi Tool</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
