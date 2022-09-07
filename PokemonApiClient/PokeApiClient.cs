@@ -27,6 +27,9 @@ namespace PokemonApiClient
                 
                 var pokemon = JsonConvert.DeserializeObject<Pokemon>(content);
 
+                if (pokemon == null)
+                    return new GetPokemonResult().WithError(HttpStatusCode.InternalServerError, "Unable to serialize result", null);
+
                 return new GetPokemonResult
                 {
                     Pokemon = pokemon
