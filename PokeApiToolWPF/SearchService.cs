@@ -3,8 +3,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using Newtonsoft.Json;
-using PokeApiTool.Common;
-using PokeApiTool.Common.Types;
 using PokeApiTool.Data.Cache;
 using PokeApiTool.Properties;
 using PokeApiToolWPF.Common;

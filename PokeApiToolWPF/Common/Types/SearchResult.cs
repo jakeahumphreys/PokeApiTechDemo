@@ -1,5 +1,4 @@
-﻿using PokeApiTool.Common.Types;
-using PokemonApiClient.Types;
+﻿using PokemonApiClient.Types;
 
 namespace PokeApiToolWPF.Common.Types
 {

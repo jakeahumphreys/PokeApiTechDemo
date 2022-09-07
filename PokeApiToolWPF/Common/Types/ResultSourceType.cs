@@ -1,4 +1,4 @@
-﻿namespace PokeApiTool.Common.Types
+﻿namespace PokeApiToolWPF.Common.Types
 {
     public static class ResultSourceType
     {
