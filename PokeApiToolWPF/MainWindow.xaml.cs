@@ -41,6 +41,7 @@ namespace PokeApiToolWPF
                     PopulateFormFromResult(searchResult.Pokemon, searchResult.Source);
                 }
             }
+            txtPokemonName.Clear();
         }
         
         private void PopulateFormFromResult(Pokemon pokemon, string resultSource)
