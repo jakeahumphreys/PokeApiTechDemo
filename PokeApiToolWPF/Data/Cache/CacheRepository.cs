@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
+using PokeApiToolWPF.Data;
+using PokeApiToolWPF.Data.Cache;
 using PokeApiToolWPF.Data.Cache.Types;
 
 namespace PokeApiTool.Data.Cache

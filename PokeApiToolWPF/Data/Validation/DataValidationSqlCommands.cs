@@ -1,4 +1,4 @@
-﻿namespace PokeApiTool.Data.Validation
+﻿namespace PokeApiToolWPF.Data.Validation
 {
     public static class DataValidationSqlCommands
     {
