@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PokeApiTool.Common
+namespace PokeApiToolWPF.Common
 {
     public static class Randomiser
     {
