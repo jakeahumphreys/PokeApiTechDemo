@@ -82,10 +82,11 @@ namespace PokeApiToolWPF
             return pokemon.Sprites.FrontDefault;
         }
 
-        private Pokemon FetchPokemonFromApi(string searchText)
+        private Pokemon? FetchPokemonFromApi(string searchText)
         {
             DebugLog("Fetching from API");
             var result = _pokeApiClient.GetPokemon(searchText);
+            
             if (result.HasError)
             {
                 MessageBox.Show(result.Error.Message);

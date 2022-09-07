@@ -137,7 +137,9 @@ namespace PokeApiToolWPF
 
         private void LstHistory_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            CallSearch(lstHistory.SelectedItem.ToString());
+            var pokemonNameFromHistoryList = lstHistory.SelectedItem.ToString();
+            if(!string.IsNullOrEmpty(pokemonNameFromHistoryList))
+                CallSearch(pokemonNameFromHistoryList);
         }
     }
 }
