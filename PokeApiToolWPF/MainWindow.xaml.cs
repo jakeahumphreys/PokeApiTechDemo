@@ -61,8 +61,10 @@ namespace PokeApiToolWPF
             
             tvDetails.Items.Clear();
             
-            var sourceNode = new TreeViewItem();
-            sourceNode.Header = "Result Source";
+            var sourceNode = new TreeViewItem
+            {
+                Header = "Result Source"
+            };
             sourceNode.Items.Add(new TreeViewItem
             {
                 Header = resultSource
