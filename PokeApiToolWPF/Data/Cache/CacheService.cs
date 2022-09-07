@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using PokeApiTool.Data.Cache.Types;
+using PokeApiTool.Data.Cache;
+using PokeApiToolWPF.Data.Cache.Types;
 
-namespace PokeApiTool.Data.Cache
+namespace PokeApiToolWPF.Data.Cache
 {
     public class CacheService
     {
@@ -20,12 +21,7 @@ namespace PokeApiTool.Data.Cache
         
         public void CacheResult(string pokemonName, string jsonBlob)
         {
-            var cacheEntry = new CacheEntry
-            {
-                Name = pokemonName,
-                Time = DateTime.Now,
-                Blob = jsonBlob
-            };
+            var cacheEntry = new CacheEntry(pokemonName, DateTime.Now, jsonBlob);
             
             var existingCacheEntries = _repository.GetEntriesForName(pokemonName);
 

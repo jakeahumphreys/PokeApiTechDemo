@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
-using PokeApiTool.Data.Cache.Types;
+using PokeApiToolWPF.Data.Cache.Types;
 
 namespace PokeApiTool.Data.Cache
 {
@@ -97,12 +97,8 @@ namespace PokeApiTool.Data.Cache
                             {
                                 while (reader.Read())
                                 {
-                                    cacheEntries.Add(new CacheEntry
-                                    {
-                                        Name = reader.GetString(0),
-                                        Time = DateTime.Parse(reader.GetString(1)),
-                                        Blob = reader.GetString(2)
-                                    });
+                                    cacheEntries.Add(new CacheEntry(reader.GetString(0),
+                                        DateTime.Parse(reader.GetString(1)), reader.GetString(2)));
                                 }
                             }
                         }
