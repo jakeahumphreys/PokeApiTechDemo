@@ -34,7 +34,7 @@ namespace PokeApiToolWPF
             }
             else
             {
-                var searchResult = _searchService.SearchForPokemon(searchText);
+                var searchResult = _searchService.SearchForPokemon(searchText.ToLower());
 
                 if (searchResult.Pokemon != null)
                 {
