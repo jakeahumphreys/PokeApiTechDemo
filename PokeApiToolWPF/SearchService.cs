@@ -7,6 +7,7 @@ using PokeApiTool.Common;
 using PokeApiTool.Common.Types;
 using PokeApiTool.Data.Cache;
 using PokeApiTool.Properties;
+using PokeApiToolWPF.Common;
 using PokeApiToolWPF.Common.Types;
 using PokeApiToolWPF.Data.Cache;
 using PokemonApiClient;
