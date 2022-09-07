@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.SQLite;
-using PokeApiTool.Data;
 
 namespace PokeApiToolWPF.Data.Validation
 {
