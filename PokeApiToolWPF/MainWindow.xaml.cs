@@ -5,6 +5,7 @@ using System.Windows.Documents;
 using System.Windows.Media.Imaging;
 using Newtonsoft.Json;
 using PokeApiTool.Common;
+using PokeApiToolWPF.Common;
 using PokemonApiClient.Types;
 
 
