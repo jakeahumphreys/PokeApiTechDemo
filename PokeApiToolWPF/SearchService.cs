@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Windows;
 using Newtonsoft.Json;
 using PokeApiTool.Data.Cache;
@@ -17,11 +18,13 @@ namespace PokeApiToolWPF
     {
         private readonly PokeApiClient _pokeApiClient;
         private readonly CacheService _cacheService;
+        private readonly bool _isOnline;
 
         public SearchService()
         {
             _pokeApiClient = new PokeApiClient();
             _cacheService = new CacheService(new CacheRepository());
+            _isOnline = IsOnline();
             DebugLog("Logging Enabled");
         }
         
@@ -29,6 +32,17 @@ namespace PokeApiToolWPF
         {
             if (Settings.Default.DebugLogging)
                 Console.WriteLine($"[Debug] {text}");
+        }
+
+        private bool IsOnline()
+        {
+            var pingSender = new Ping();
+            var ping = pingSender.Send("8.8.8.8", 250);
+
+            if (ping.Status == IPStatus.TimedOut)
+                return false;
+
+            return true;
         }
         
         public SearchResult SearchForPokemon(string searchText)
@@ -44,7 +58,7 @@ namespace PokeApiToolWPF
             {
                 var cacheEntry = potentialCacheEntries.First();
 
-                if (cacheEntry.Time.AddMinutes(10) > DateTime.Now)
+                if (cacheEntry.Time.AddMinutes(10) > DateTime.Now || !_isOnline)
                 {
                     DebugLog("Fetching from cache");
                     searchResult.Pokemon = JsonConvert.DeserializeObject<Pokemon>(cacheEntry.Blob);
@@ -58,8 +72,11 @@ namespace PokeApiToolWPF
             }
             else
             {
-                searchResult.Pokemon = FetchPokemonFromApi(searchText);
-                searchResult.Source = ResultSourceType.RESULT_API;
+                if (_isOnline)
+                {
+                    searchResult.Pokemon = FetchPokemonFromApi(searchText);
+                    searchResult.Source = ResultSourceType.RESULT_API;
+                }
             }
             
             stopwatch.Stop();
