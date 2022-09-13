@@ -6,7 +6,7 @@
 
 # Background
 
-I wrote this application as a small demonstration for an interview for Radius Payment Solutions to act as a brief showcase of some of the skills I have. Naturally it doesn't cover everything, but I've aimed to tick a few things of the job requirements list. Namely:
+I wrote this application as a small demonstration for a job interview to act as a brief showcase of some of the skills I have. Naturally it doesn't cover everything, but I've aimed to tick a few things of the job requirements list. Namely:
 
 - .Net 4.7 (Although this is written in 4.8).
 - C#.
